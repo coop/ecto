@@ -203,7 +203,7 @@ defmodule Ecto.Query.Planner do
   rescue
     e ->
       # Reraise errors so we ignore the planner inner stacktrace
-      filter_and_reraise e, System.stacktrace
+      filter_and_reraise e, System.stacktrace()
   end
 
   @doc """
@@ -827,7 +827,7 @@ defmodule Ecto.Query.Planner do
   rescue
     e ->
       # Reraise errors so we ignore the planner inner stacktrace
-      filter_and_reraise e, System.stacktrace
+      filter_and_reraise e, System.stacktrace()
   end
 
   defmacrop is_literal(val) do

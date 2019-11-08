@@ -1421,7 +1421,7 @@ defmodule Ecto.Repo do
       end)
 
       # With Ecto.Multi
-      Ecto.Multi.new
+      Ecto.Multi.new()
       |> Ecto.Multi.insert(:post, %Post{})
       |> MyRepo.transaction
 
